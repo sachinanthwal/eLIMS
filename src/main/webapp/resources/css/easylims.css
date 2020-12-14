@@ -1,0 +1,15 @@
+#customerlist_length select {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 50px;
+}
+#customerlist_filter input {
+    margin-top: 5px;
+    width: 108px;
+}
+
+td {padding: 5px; cursor: pointer;}
+tr.highlighted td {
+    background-color: #5bc0de;
+    color: #FFF;
+}

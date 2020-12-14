@@ -1,0 +1,28 @@
+Calculation 
+1. Execute Analyte Calculation
+
+Jasper
+- It require java 1.7, does't support 1.8
+- Jasper report (.jrxml) - remove language-'Groovy' otherwise it will compilation error. 
+
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.1.0</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>jackson-core</artifactId>
+					<groupId>com.fasterxml.jackson.core</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jackson-databind</artifactId>
+					<groupId>com.fasterxml.jackson.core</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jackson-annotations</artifactId>
+					<groupId>com.fasterxml.jackson.core</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+- Jackson-xxxx need to be excluded because there another version in project already.
